@@ -1,5 +1,14 @@
 const projects = [
   {
+    id: 0,
+    title: "Random Gif Generator",
+    description: "A React app that fetches and displays random GIFs using the Giphy API.",
+    tech: ["React", "Tailwind", "API"],
+    github: "https://github.com/punitsingh81/Random-Gif-Generate",
+    demo: "https://random-gif-generate.vercel.app/",
+    image: "/photo/random-gif.png", // correct path
+  },
+  {
     id: 1,
     title: "Weather App",
     description: "A simple weather app that shows real-time weather data using OpenWeather API.",
