@@ -36,7 +36,7 @@ const About = () => {
         <div className="flex space-x-4">
             <a
             
-            href="/photo/punit shekhawat resume.pdf" 
+            href="/photo/punit shekhawat updated resume.pdf" 
             download
             className="px-6 py-2 bg-teal-500 rounded-lg hover:bg-teal-600 transition"
             >
