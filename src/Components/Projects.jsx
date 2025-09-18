@@ -1,6 +1,15 @@
 const projects = [
   {
     id: 0,
+    title: "Ecomzy – Online Shopping",
+    description: "A clean and responsive e-commerce website UI with product listings and add-to-cart functionality.",
+    tech: ["React","Redux","Tailwind","API"],
+    github: "https://github.com/punitsingh81/Shopping-Card",
+    demo: "https://shopping-card-eight-jade.vercel.app/",
+    image: "/photo/Shopping-Card.png",
+  },
+  {
+    id: 1,
     title: "Random Gif Generator",
     description: "A React app that fetches and displays random GIFs using the Giphy API.",
     tech: ["React", "Tailwind", "API"],
@@ -9,7 +18,7 @@ const projects = [
     image: "/photo/random-gif.png", // correct path
   },
   {
-    id: 1,
+    id: 2,
     title: "Weather App",
     description: "A simple weather app that shows real-time weather data using OpenWeather API.",
     tech: ["React", "Tailwind", "API"],
@@ -18,7 +27,7 @@ const projects = [
     image: "/photo/Weather.png", // correct path
   },
   {
-    id: 2,
+    id: 3,
     title: "Tic Tac Toe Game",
     description: "A classic tic tac toe game built with React, featuring two-player gameplay.",
     tech: ["React", "Tailwind", "JavaScript"],
@@ -27,7 +36,7 @@ const projects = [
     image: "/photo/Tic.png", // correct path
   },
   {
-    id: 3,
+    id: 4,
     title: "Password Generator",
     description: "Generates strong and customizable passwords with options for length & character types.",
     tech: ["React", "Tailwind", "JavaScript"],
@@ -36,7 +45,7 @@ const projects = [
     image: "/photo/Password.png", // correct path
   },
   {
-    id: 4,
+    id: 5,
     title: "GitHub Profile Finder",
     description: "Search and view GitHub user profiles with repos and followers using GitHub API.",
     tech: ["React", "Tailwind", "API"],

@@ -1,6 +1,7 @@
-
+  // import { motion } from "framer-motion";
 const Hero = () => {
   return (
+  
     <section className="h-screen flex flex-col justify-center items-center text-center">
       <h2 className="text-4xl md:text-6xl font-bold">Hi, I'm Punit Shekhawat👋</h2>
       <p className="mt-4 text-lg md:text-xl text-gray-400">
@@ -15,6 +16,7 @@ const Hero = () => {
         </a>
       </div>
     </section>
+    
   )
 }
 
