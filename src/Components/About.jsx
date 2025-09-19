@@ -1,8 +1,10 @@
-
+import {motion} from "framer-motion"
+import { Typewriter } from "react-simple-typewriter";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-800 text-white">
+    <section
+    id="about" className="py-20 bg-gray-800 text-white">
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
         
         {/* Profile Image */}
@@ -15,20 +17,31 @@ const About = () => {
         </div>
 
         {/* About Content */}
-        <div className="flex-1">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        className="flex-1">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-gray-300 leading-relaxed mb-6">
             Hi, I'm <span className="text-teal-400 font-semibold">Punit Shekhawat</span> 👋 , 
-            a passionate <span className="text-teal-400 font-semibold">Frontend Developer</span> 
+            a passionate <span className="text-teal-400 font-semibold">Frontend Developer </span> 
             currently pursuing B.Tech in Computer Science from Rajasthan Technical University (RTU), Kota.  
-            I love building modern, responsive web apps using React, Tailwind CSS, and JavaScript.  
-            My goal is to craft clean, user-friendly, and efficient digital experiences. 
+            {/* I love building modern, responsive web apps using React, Tailwind CSS, and JavaScript.  
+            My goal is to craft clean, user-friendly, and efficient digital experiences.  */}
 
         </p>
         <p className="text-gray-300 leading-relaxed mb-6">
-            My core stack is <span className="text-teal-400">React, TailwindCSS, and JavaScript</span>, 
+            My core stack is <span className="text-teal-400"><Typewriter words={["ReactJs", "TailwindCSS", "JavaScript","MongoDB","NodeJs,ExpressJs"]} 
+            loop={true}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
+            /></span>,
             but I am constantly learning and exploring new tools and technologies.  
-            Beyond coding, I love problem-solving, UI/UX design, and creating projects 
+            Beyond coding, UI/UX design, and creating projects 
             that make a real-world impact.
         </p>
         
@@ -49,7 +62,7 @@ const About = () => {
             Contact Me
             </a>
         </div>
-        </div>
+        </motion.div>
     </div>
     </section>
     );
