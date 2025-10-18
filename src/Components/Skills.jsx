@@ -1,43 +1,49 @@
 
-// const Skills = () => {
-//   return (
-//     <div></div>
-//   )
-// }
 
-// export default Skills
-
-// src/components/Skills.jsx
-import { FaCss3Alt, FaGithub, FaHtml5, FaJsSquare, FaReact } from "react-icons/fa";
-import { SiFirebase, SiRedux, SiTailwindcss } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const skills = [
-  { id: 1, name: "HTML5", icon: <FaHtml5 className="text-orange-500" size={40} /> },
-  { id: 2, name: "CSS3", icon: <FaCss3Alt className="text-blue-500" size={40} /> },
-  { id: 3, name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" size={40} /> },
-  { id: 4, name: "ReactJS", icon: <FaReact className="text-cyan-400" size={40} /> },
-  { id: 5, name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" size={40} /> },
-  { id: 6, name: "Redux", icon: <SiRedux className="text-purple-500" size={40} /> },
-  { id: 7, name: "Router", icon: <SiFirebase className="text-yellow-500" size={40} /> },
-  { id: 8, name: "GitHub", icon: <FaGithub className="text-gray-300" size={40} /> },
+  { name: "HTML5", level: 95, color: "bg-orange-500" },
+  { name: "CSS3", level: 90, color: "bg-blue-500" },
+  { name: "JavaScript", level: 85, color: "bg-yellow-400" },
+  { name: "ReactJS", level: 88, color: "bg-cyan-400" },
+  { name: "Tailwind CSS", level: 92, color: "bg-teal-400" },
+  { name: "Node.js", level: 80, color: "bg-green-500" },
+  { name: "Express.js", level: 75, color: "bg-gray-400" },
+  { name: "MongoDB", level: 70, color: "bg-green-600" },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-12">🛠 Skills</h2>
+    <section id="skills" className="py-20 bg-gray-900 text-white ">
+      <div className="max-w-5xl mx-auto px-6 ">
+        <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-teal-500 bg-clip-text text-transparent">
+          🚀 My Skills
+        </h2>
 
-        {/* Skill Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-          {skills.map((skill) => (
-            <div
-              key={skill.id}
-              className="flex flex-col items-center bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition duration-300"
+        <div className="space-y-6">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              {skill.icon}
-              <p className="mt-3 text-lg font-medium">{skill.name}</p>
-            </div>
+              <div className="flex justify-between mb-2">
+                <span className="font-semibold text-lg">{skill.name}</span>
+                <span className="text-gray-400">{skill.level}%</span>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
+                <motion.div
+                  className={`h-3 ${skill.color} rounded-full`}
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                ></motion.div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -46,3 +52,4 @@ const Skills = () => {
 };
 
 export default Skills;
+

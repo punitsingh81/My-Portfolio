@@ -64,6 +64,58 @@ const About = () => {
         </div>
         </motion.div>
     </div>
+
+    {/* Education Section */}
+          <div className="max-w-5xl mx-auto px-6 mt-16">
+            <h2 className="text-4xl font-semibold mb-4">
+              Education
+            </h2>
+            <div className="space-y-4">
+              {/* Degree 1 */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-gray-700 p-4 rounded-lg shadow-md"
+              >
+                <h4 className="text-lg font-bold">
+                  B.Tech in Computer Science and Engineering (AI & DS)
+                </h4>
+                <p className="text-gray-300">
+                  Rajasthan Technical University (RTU), Kota
+                </p>
+                <p className="text-gray-400 text-sm">2022 – 2026</p>
+              </motion.div>
+
+              {/* Degree 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="bg-gray-700 p-4 rounded-lg shadow-md"
+              >
+                <h4 className="text-lg font-bold">Senior Secondary (12th Grade)</h4>
+                <p className="text-gray-300">
+                  Sarswati Modern Senior Secondary School, Bansur, Alwar, Rajasthan
+                </p>
+                <p className="text-gray-400 text-sm">Completed in 2022</p>
+              </motion.div>
+
+              {/* Degree 3 */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="bg-gray-700 p-4 rounded-lg shadow-md"
+              >
+                <h4 className="text-lg font-bold">Secondary (10th Grade)</h4>
+                <p className="text-gray-300">Sarswati Modern Senior Secondary School, Bansur, Alwar, Rajasthan</p>
+                <p className="text-gray-400 text-sm">Completed in 2020</p>
+              </motion.div>
+            </div>
+          </div>
+        {/* </motion.div> */}
+      {/* // </div> */}
     </section>
     );
 };
