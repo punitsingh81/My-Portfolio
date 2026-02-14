@@ -26,7 +26,7 @@ const Footer = () => {
         {/* Middle - Resume Link */}
         <div className="mb-4 md:mb-0">
           <a
-            href="/photo/punit shekhawat updated resume.pdf" 
+            href="/photo/ResumePunit1.pdf" 
             download
             className="px-4 py-2 bg-teal-500 text-white rounded-lg shadow-md hover:bg-teal-600 transition"
           >

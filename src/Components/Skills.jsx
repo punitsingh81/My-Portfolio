@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 const skills = [
   { name: "HTML5", level: 95, color: "bg-orange-500" },
   { name: "CSS3", level: 90, color: "bg-blue-500" },
+  { name: "Tailwind CSS", level: 92, color: "bg-teal-400" },
   { name: "JavaScript", level: 85, color: "bg-yellow-400" },
   { name: "ReactJS", level: 88, color: "bg-cyan-400" },
-  { name: "Tailwind CSS", level: 92, color: "bg-teal-400" },
+  
   { name: "Node.js", level: 80, color: "bg-green-500" },
   { name: "Express.js", level: 75, color: "bg-gray-400" },
   { name: "MongoDB", level: 70, color: "bg-green-600" },
